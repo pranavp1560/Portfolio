@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pranav</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"/>
+</head>
+<body>
+  <!-- ===== Navbar ===== -->
+  <nav class="navbar">
+    <div class="logo">
+      <a href="/">
+        <img src="{{ url_for('static', filename='pranav_logo.png') }}" alt="Logo" />
+      </a>
+    </div>
+    
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="/admin">Admin</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== Hero ===== -->
+  <header class="hero">
+    <div class="hero-text">
+      <h1>Hello, I'm <span class="purple">Pranav</span></h1>
+      <h2>Data Scientist...<span class="cursor">|</span></h2>
+      <p>
+        Enthusiastic Data Science student skilled in Python for data analysis, machine learning, and automation. Experienced in building 
+        end-to-end solutions with strong foundations in Data Science and supporting Web Development using Flask and MongoDB. 
+      </p>
+      <a href="#projects" class="btn">View Projects</a>
+    </div>
+    <div class="hero-img">
+      <img src="{{ url_for('static', filename='pranav.png') }}" alt="profile"/>
+    </div>
+  </header>
+
+  <!-- ===== About ===== -->
+  <section id="about" class="about">
+    <div class="about-text">
+      <h2>About Me</h2>
+      <p>
+        I’m Pranav Chandrakant Patil, a passionate Data Science student with hands-on experience in Python,
+         Machine Learning, and Full-Stack Development. I’ve built impactful projects ranging from a phishing
+          website detector to a Ganeshotsav Mandal Management System using Flask and MongoDB. With strong 
+          problem-solving skills and a drive to learn, I specialize in creating end-to-end solutions that 
+          merge Data Science and Web Development.
+    </div>
+  </section>
+
+<!-- ===== Projects ===== -->
+<section id="projects" class="projects">
+  <h2>Projects</h2>
+  <p>Some of the recent work I’ve done.</p>
+  <div class="project-grid">
+    {% for project in projects %}
+    <div class="project-card">
+      <img src="{{ project.image_url }}" alt="project"/>
+      <h3>{{ project.title }}</h3>
+      <p>{{ project.description }}</p>
+      {% if project.link %}
+        <a href="{{ project.link }}" target="_blank" class="btn">View Project</a>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+  
+
+  <!-- ===== Experience ===== -->
+  <section id="experience" class="experience">
+    <h2>Experience</h2>
+    <div class="timeline">
+      {% for exp in experiences %}
+      <div class="timeline-item {% if loop.index is even %}right{% else %}left{% endif %}">
+        <div class="content">
+          <h3>{{ exp.role }} @ {{ exp.company }} <span>({{ exp.year }})</span></h3>
+          <p>{{ exp.details }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- ===== Contact ===== -->
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <form action="/contact" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required/>
+      <input type="email" name="email" placeholder="Your Email" required/>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <p>© 2025 Pranav. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById("nav-links");
+      nav.classList.toggle("show");
+    }
+  </script>
+</body>
+</html>

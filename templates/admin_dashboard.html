@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        body {
+            background: #f4f4f4;
+            font-family: Arial, sans-serif;
+            padding: 2rem;
+        }
+
+        h2 {
+            color: purple;
+        }
+        h1{
+            color: black;
+        }
+
+        form {
+            background: #fff;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 0.7rem;
+            margin: 0.5rem 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            padding: 0.7rem 1.5rem;
+            background: purple;
+            border: none;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        a {
+            text-decoration: none;
+            color: red;
+        }
+        /* ===== Contact Table ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-family: 'Poppins', sans-serif;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+thead tr {
+  background: purple;
+  color: #fff;
+  text-align: left;
+  font-weight: 600;
+}
+
+thead th {
+  padding: 0.8rem 1rem;
+}
+
+tbody td {
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid #eee;
+  color: #333;
+}
+
+tbody tr:hover {
+  background: #f3f0ff;
+  transition: 0.3s;
+}
+
+/* Responsive for small screens */
+@media screen and (max-width: 768px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+    width: 100%;
+  }
+
+  thead tr {
+    display: none;
+  }
+
+  tbody tr {
+    margin-bottom: 1rem;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    padding: 1rem;
+  }
+
+  tbody td {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    border-bottom: none;
+  }
+
+  tbody td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: purple;
+  }
+}
+
+    </style>
+</head>
+
+<body>
+    <h1>Admin Dashboard</h1>
+    <a href="{{ url_for('logout') }}">Logout</a>
+
+    <!-- Add Project -->
+    <h2>Add Project</h2>
+    <form action="{{ url_for('add_project') }}" method="POST" enctype="multipart/form-data">
+        <input type="text" name="title" placeholder="Project Title" required>
+        <textarea name="description" placeholder="Project Description" required></textarea>
+        <input type="file" name="image" accept="image/*" required>
+        <input type="url" name="link" placeholder="Project Link (GitHub/Deployed)" required>
+        <button type="submit">Add Project</button>
+    </form>
+
+    <!-- Add Experience -->
+    <h2>Add Experience</h2>
+    <form action="{{ url_for('add_experience') }}" method="POST">
+        <input type="text" name="role" placeholder="Role" required>
+        <input type="text" name="company" placeholder="Company" required>
+        <input type="number" name="year" placeholder="Year (e.g. 2024)" required>
+        <textarea name="details" placeholder="Experience Details" required></textarea>
+        <button type="submit">Add Experience</button>
+    </form>
+
+    <!-- Contact Submissions -->
+<h2>Contact Messages</h2>
+<!-- {% if contacts %}
+<table style="width:100%; background:#fff; padding:1rem; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+  <thead>
+    <tr style="background:purple; color:white;">
+      <th style="padding:0.7rem;">Name</th>
+      <th style="padding:0.7rem;">Email</th>
+      <th style="padding:0.7rem;">Message</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for contact in contacts %}
+    <tr>
+      <td style="padding:0.7rem;">{{ contact.name }}</td>
+      <td style="padding:0.7rem;">{{ contact.email }}</td>
+      <td style="padding:0.7rem;">{{ contact.message }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% else %}
+<p>No contact messages yet.</p>
+{% endif %} -->
+
+{% if contacts %}
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Message</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for contact in contacts %}
+    <tr>
+        <td data-label="Name">{{ contact.name }}</td>
+        <td data-label="Email">{{ contact.email }}</td>
+        <td data-label="Message">{{ contact.message }}</td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% else %}
+<p>No contact messages yet.</p>
+{% endif %}
+
+</body>
+
+</html>
