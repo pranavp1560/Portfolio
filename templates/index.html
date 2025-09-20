@@ -18,8 +18,9 @@
     <div class="hamburger" onclick="toggleMenu()">☰</div>
     <ul class="nav-links" id="nav-links">
       <li><a href="#about">About</a></li>
-      <li><a href="#experience">Experience</a></li>
       <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
       <li><a href="#contact">Contact</a></li>
       <li><a href="/admin">Admin</a></li>
     </ul>
@@ -88,6 +89,52 @@
       {% endfor %}
     </div>
   </section>
+
+  <!-- ================= Skills Section ================= -->
+<section id="skills">
+  <h2 class="section-title">Skills</h2>
+  <p class="section-subtitle">Technologies and tools I use daily.</p>
+
+  <div class="skills-grid">
+    <!-- Skill Card -->
+    <div class="skill-card">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="skill-icon">
+      <h3>Python</h3>
+      <p>(Numpy, Pandas, Scikit-learn, Flask)</p>
+    </div>
+
+    <div class="skill-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/2103/2103832.png" alt="Machine Learning" class="skill-icon">
+      <h3>Machine Learning</h3>
+      <p>(Classification, Regression, Clustering)</p>
+    </div>
+
+    <div class="skill-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="Web Development" class="skill-icon">
+      <h3>Web Development</h3>
+      <p>(HTML, CSS, JavaScript, React)</p>
+    </div>
+
+    <div class="skill-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/942/942748.png" alt="Cloud" class="skill-icon">
+      <h3>Cloud & Tools</h3>
+      <p>(Git, Git-Hub, cloudinary, VS code, eclips, )</p>
+    </div>
+
+    <div class="skill-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/1006/1006363.png" alt="Databases" class="skill-icon">
+      <h3>Databases</h3>
+      <p>(SQL, MongoDB , SQlAlchmy)</p>
+    </div>
+
+    <div class="skill-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/1829/1829448.png" alt="Data Visualization" class="skill-icon">
+      <h3>Data Visualization</h3>
+      <p>(Matplotlib, Seaborn, Tableau)</p>
+    </div>
+  </div>
+</section>
+
 
   <!-- ===== Contact ===== -->
   <section id="contact" class="contact">
