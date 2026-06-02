@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Me | Pranav</title>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- ===== Navbar ===== -->
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index.html">
+        <img src="assets/images/pranav_logo.png" alt="Logo" />
+      </a>
+    </div>
+    
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#projects">Projects</a></li>
+      <li><a href="index.html#experience">Experience</a></li>
+      <li><a href="index.html#skills">Skills</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== About ===== -->
+  <section id="about" class="about">
+    <div class="about-text">
+      <h2>About Me</h2>
+      <p>
+        I’m Pranav Chandrakant Patil, a passionate Data Science student with hands-on experience in Python,
+        Machine Learning, and Full-Stack Development. I’ve built impactful projects ranging from a phishing
+        website detector to a Ganeshotsav Mandal Management System using Flask and MongoDB. With strong 
+        problem-solving skills and a drive to learn, I specialize in creating end-to-end solutions that 
+        merge Data Science and Web Development.
+      </p>
+    </div>
+  </section>
+
+  <!-- ================= Skills Section ================= -->
+  <section id="skills">
+    <h2 class="section-title">Skills</h2>
+    <p class="section-subtitle">Technologies and tools I use daily.</p>
+
+    <div class="skills-grid">
+      <!-- Skill Cards -->
+      <div class="skill-card">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="skill-icon">
+        <h3>Python</h3>
+        <p>(Numpy, Pandas, Scikit-learn, Flask)</p>
+      </div>
+
+      <div class="skill-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/2103/2103832.png" alt="Machine Learning" class="skill-icon">
+        <h3>Machine Learning</h3>
+        <p>(Classification, Regression, Clustering)</p>
+      </div>
+
+      <div class="skill-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="Web Development" class="skill-icon">
+        <h3>Web Development</h3>
+        <p>(HTML, CSS, JavaScript, React)</p>
+      </div>
+
+      <div class="skill-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/942/942748.png" alt="Cloud" class="skill-icon">
+        <h3>Cloud & Tools</h3>
+        <p>(Git, Git-Hub, Cloudinary, VS Code, Eclipse)</p>
+      </div>
+
+      <div class="skill-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/1006/1006363.png" alt="Databases" class="skill-icon">
+        <h3>Databases</h3>
+        <p>(SQL, MongoDB, SQLAlchemy)</p>
+      </div>
+
+      <div class="skill-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/1829/1829448.png" alt="Data Visualization" class="skill-icon">
+        <h3>Data Visualization</h3>
+        <p>(Matplotlib, Seaborn, Tableau)</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Experience ===== -->
+  <section id="experience" class="experience">
+    <h2>Experience</h2>
+    <div class="timeline">
+      <div class="timeline-item left">
+        <div class="content">
+          <h3>Full-Stack Developer Intern <span>(2024)</span></h3>
+          <p>Developed and launched the Ganeshotsav Mandal Management System. Engineered custom donation collection flows and reporting interfaces using Flask and MongoDB.</p>
+        </div>
+      </div>
+      <div class="timeline-item right">
+        <div class="content">
+          <h3>Machine Learning Project Lead <span>(2023)</span></h3>
+          <p>Developed and deployed a Phishing Website Detector using Scikit-Learn. Preprocessed raw URL features, optimized classification algorithms, and served the model via a lightweight Flask web interface.</p>
+        </div>
+      </div>
+      <div class="timeline-item left">
+        <div class="content">
+          <h3>Data Analyst Trainee <span>(2022)</span></h3>
+          <p>Formulated robust data visualization dashboards using Matplotlib, Seaborn, and Tableau. Automated repetitive reporting pipelines in Python, decreasing manual processing time significantly.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <p>© 2025 Pranav. All Rights Reserved.</p>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

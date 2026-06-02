@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Me | Pranav</title>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- ===== Navbar ===== -->
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index.html">
+        <img src="assets/images/pranav_logo.png" alt="Logo" />
+      </a>
+    </div>
+    
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#projects">Projects</a></li>
+      <li><a href="index.html#experience">Experience</a></li>
+      <li><a href="index.html#skills">Skills</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== Contact ===== -->
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Your Name" required/>
+      <input type="email" id="email" placeholder="Your Email" required/>
+      <textarea id="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+    <!-- ===== Alternative Contact Links ===== -->
+    <div style="margin-top: 2.5rem; display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap;">
+      <a href="https://wa.me/919999999999?text=Hello%20Pranav,%20I%20saw%20your%20portfolio" target="_blank" class="btn" style="background: #25D366; display: inline-flex; align-items: center; gap: 10px; border-radius: 30px;">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" style="width: 20px; height: 20px; filter: invert(1);"/>
+        Chat on WhatsApp
+      </a>
+      
+      <a href="https://github.com/Navayuvk18" target="_blank" class="btn" style="background: #333; display: inline-flex; align-items: center; gap: 10px; border-radius: 30px;">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub" style="width: 20px; height: 20px; filter: invert(1);"/>
+        GitHub Profile
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <p>© 2025 Pranav. All Rights Reserved.</p>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script>
+    // Handle form submit completely client-side via mailto redirection
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const name = encodeURIComponent(document.getElementById("name").value);
+      const email = encodeURIComponent(document.getElementById("email").value);
+      const message = encodeURIComponent(document.getElementById("message").value);
+      
+      const mailtoUrl = `mailto:pranavpatil@example.com?subject=Contact from Portfolio: ${name}&body=Sender Name: ${name}%0D%0ASender Email: ${email}%0D%0A%0D%0AMessage:%0D%0A${message}`;
+      
+      window.location.href = mailtoUrl;
+    });
+  </script>
+</body>
+</html>

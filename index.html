@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pranav | Portfolio</title>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- ===== Navbar ===== -->
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index.html">
+        <img src="assets/images/pranav_logo.png" alt="Logo" />
+      </a>
+    </div>
+    
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== Hero ===== -->
+  <header class="hero">
+    <div class="hero-text">
+      <h1>Hello, I'm <span class="purple">Pranav</span></h1>
+      <h2>Data Scientist...<span class="cursor">|</span></h2>
+      <p>
+        Enthusiastic Data Science student skilled in Python for data analysis, machine learning, and automation. Experienced in building 
+        end-to-end solutions with strong foundations in Data Science and supporting Web Development using Flask and MongoDB. 
+      </p>
+      <a href="#projects" class="btn">View Resume</a>
+    </div>
+    <div class="hero-img">
+      <img src="assets/images/pranav.png" alt="profile"/>
+    </div>
+  </header>
+
+  <!-- ===== About ===== -->
+  <section id="about" class="about">
+    <div class="about-text">
+      <h2>About Me</h2>
+      <p>
+        I’m Pranav Chandrakant Patil, a passionate Data Science student with hands-on experience in Python,
+        Machine Learning, and Full-Stack Development. I’ve built impactful projects ranging from a phishing
+        website detector to a Ganeshotsav Mandal Management System using Flask and MongoDB. With strong 
+        problem-solving skills and a drive to learn, I specialize in creating end-to-end solutions that 
+        merge Data Science and Web Development.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== Projects ===== -->
+  <section id="projects" class="projects">
+    <h2>Projects</h2>
+    <p>Some of the recent work I’ve done.</p>
+    <div class="project-grid">
+      <!-- Project 1 -->
+      <div class="project-card">
+        <img src="assets/images/projects/roomify.png" alt="Ganeshotsav Mandal Management System"/>
+        <h3>Roomify – Smart Hostel & Mess Management System </h3>
+        <p>•	Built a system combining DS, ML, and Web Development to manage student accommodation and mess services. 
+•	Implemented AI-based sentiment analysis on user reviews to evaluate ratings and service quality. 
+</p>
+        <a href="https://roomify-dw5e.onrender.com" target="_blank" class="btn">View Project</a>
+      </div>
+      <!-- Project 1 -->
+      <div class="project-card">
+        <img src="assets/images/projects/Gemini_Generated_Image_vew3nqvew3nqvew3.png" alt="Ganeshotsav Mandal Management System"/>
+        <h3>Ganeshotsav Mandal Management System</h3>
+        <p>A digital platform designed to manage Mandal donations, events, volunteer assignments, and daily operations. Built using Flask and MongoDB with secure tracking.</p>
+        <a href="https://navayuvak-wathar-t2m8.onrender.com" target="_blank" class="btn">View Project</a>
+      </div>
+      
+      <!-- Project 2 -->
+      <div class="project-card">
+        <img src="assets/images/projects/Gemini_Generated_Image_qq6eggqq6eggqq6e.png" alt="Phishing Website Detector"/>
+        <h3>Phishing Website Detector</h3>
+        <p>A machine learning-driven web application that analyzes URL characteristics to predict and block potential phishing threats using classification algorithms.</p>
+        <a href="https://github.com/pranavp1560/WebShield.git" target="_blank" class="btn">View Project</a>
+      </div>
+
+      <!-- Project 3 -->
+    
+  </section>
+
+  <!-- ===== Experience ===== -->
+  <section id="experience" class="experience">
+    <h2>Experience</h2>
+    <div class="timeline">
+      <div class="timeline-item left">
+        <div class="content">
+          <h3>AI Developer Intern <span>(2026)</span></h3>
+        <p>•	Developed an Algorithmic Trading System using data analysis, machine learning, and automation. 
+•	Built API-based pipelines to collect and process market data (stocks, indices, crypto) from multiple brokers. 
+•	Created structured time-series datasets (OHLC, volume) for backtesting and model development. 
+</p>
+        </div>
+      </div>
+      <div class="timeline-item right">
+        <div class="content">
+          <h3>IIT Bombay | EdTech Intern (Educational Data Analysis) <span>(2023)</span></h3>
+        <p>•	Worked on the problem statement “Emotion Classification using Facial Expressions and EEG Data.”
+•	Analyzed multimodal datasets to identify emotional states using data preprocessing & feature extraction techniques.
+•	Applied ML models for emotion detection and evaluated their performance for educational engagement insights.
+</p>
+        </div>
+      </div>
+      <div class="timeline-item left">
+        <div class="content">
+          <h3>Full-Stack Developer Intern <span>(2024)</span></h3>
+          <p>Developed and launched the Ganeshotsav Mandal Management System. Engineered custom donation collection flows and reporting interfaces using Flask and MongoDB.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Skills Section ================= -->
+  <section id="skills">
+    <h2 class="section-title">Skills</h2>
+    <p class="section-subtitle">Technologies and tools I use daily.</p>
+
+    <div class="skills-grid">
+      <!-- Skill Cards -->
+      <div class="skill-card">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="skill-icon">
+        <h3>Python</h3>
+        <p>(Numpy, Pandas, Scikit-learn, Flask)</p>
+      </div>
+
+      <div class="skill-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/2103/2103832.png" alt="Machine Learning" class="skill-icon">
+        <h3>Machine Learning</h3>
+        <p>(Classification, Regression, Clustering)</p>
+      </div>
+
+      <div class="skill-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="Web Development" class="skill-icon">
+        <h3>Web Development</h3>
+        <p>(HTML, CSS, JavaScript, React)</p>
+      </div>
+
+      <div class="skill-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/942/942748.png" alt="Cloud" class="skill-icon">
+        <h3>Cloud & Tools</h3>
+        <p>(Git, Git-Hub, Cloudinary, VS Code, Eclipse)</p>
+      </div>
+
+      <div class="skill-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/1006/1006363.png" alt="Databases" class="skill-icon">
+        <h3>Databases</h3>
+        <p>(SQL, MongoDB, SQLAlchemy)</p>
+      </div>
+
+      <div class="skill-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/1829/1829448.png" alt="Data Visualization" class="skill-icon">
+        <h3>Data Visualization</h3>
+        <p>(Matplotlib, Seaborn, Tableau)</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Contact ===== -->
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Your Name" required/>
+      <input type="email" id="email" placeholder="Your Email" required/>
+      <textarea id="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+    <!-- ===== Alternative Contact Links ===== -->
+    <div style="margin-top: 2.5rem; display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap;">
+      <a href="https://wa.me/919999999999?text=Hello%20Pranav,%20I%20saw%20your%20portfolio" target="_blank" class="btn" style="background: #25D366; display: inline-flex; align-items: center; gap: 10px; border-radius: 30px;">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" style="width: 20px; height: 20px; filter: invert(1);"/>
+        Chat on WhatsApp
+      </a>
+      
+      <a href="https://github.com/Navayuvk18" target="_blank" class="btn" style="background: #333; display: inline-flex; align-items: center; gap: 10px; border-radius: 30px;">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub" style="width: 20px; height: 20px; filter: invert(1);"/>
+        GitHub Profile
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <p>© 2025 Pranav. All Rights Reserved.</p>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script>
+    // Handle form submit completely client-side via mailto redirection
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const name = encodeURIComponent(document.getElementById("name").value);
+      const email = encodeURIComponent(document.getElementById("email").value);
+      const message = encodeURIComponent(document.getElementById("message").value);
+      
+      const mailtoUrl = `mailto:pranavpatil@example.com?subject=Contact from Portfolio: ${name}&body=Sender Name: ${name}%0D%0ASender Email: ${email}%0D%0A%0D%0AMessage:%0D%0A${message}`;
+      
+      window.location.href = mailtoUrl;
+    });
+  </script>
+</body>
+</html>
