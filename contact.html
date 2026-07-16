@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Me | Pranav Patil</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Share+Tech+Mono&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css"/>
+  
+  <!-- WebGL Three.js CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  
+  <!-- 3D Vanilla Tilt CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+</head>
+<body>
+
+  <!-- Mobile Hamburger Menu Button -->
+  <div class="hamburger" id="hud-hamburger">☰</div>
+
+  <!-- Unified HUD Wrapper -->
+  <div class="hud-wrapper">
+    
+    <!-- ===== LEFT FIXED CONTROL CONSOLE SIDEBAR ===== -->
+    <aside class="hud-sidebar" id="hud-sidebar">
+      <div class="hud-brand">
+        <a href="index.html" class="hud-logo">
+          <img src="assets/images/pranav_logo.png" alt="Logo" />
+        </a>
+        
+        <div class="hud-radar-container">
+          <div class="hud-radar"></div>
+          <div class="hud-status-info">
+            <span>SYSTEM_ONLINE: <b class="status-active">TRUE</b></span>
+            <span>MODULE: CONTACT_LINKER</span>
+            <span>STABILITY: 99.8%</span>
+          </div>
+        </div>
+      </div>
+
+      <nav class="hud-nav">
+        <ul class="hud-nav-links">
+          <li><a href="index.html#hero">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#projects">Projects</a></li>
+          <li><a href="index.html#experience">Experience</a></li>
+          <li><a href="index.html#skills">Skills</a></li>
+          <li><a href="index.html#contact" class="active">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Simulated ML Console Terminal Logs -->
+      <div class="hud-console">
+        <div class="hud-console-lines" id="hud-console-lines">
+          <!-- Populated dynamically via JS -->
+        </div>
+      </div>
+    </aside>
+
+    <!-- ===== RIGHT SCROLL FEED PANEL (CONTACT DETAILS) ===== -->
+    <main class="hud-content">
+      
+      <!-- CONTACT PANEL -->
+      <section id="contact" class="contact" style="padding-top: 120px;">
+        <h2 class="section-title">Query Transmission</h2>
+        <p class="section-subtitle">Establish transmission link to the developer server.</p>
+        
+        <div class="contact-container hud-card" style="width: 100%;">
+          <form id="contactForm">
+            <input type="text" id="name" placeholder="Transmission Source (Your Name)" required/>
+            <input type="email" id="email" placeholder="Communication Node (Your Email)" required/>
+            <textarea id="message" placeholder="Message Payload" required></textarea>
+            <button type="submit" class="btn">Transmit Signal</button>
+          </form>
+        </div>
+
+        <div class="contact-links">
+          <a href="https://wa.me/919999999999?text=Hello%20Pranav,%20I%20saw%20your%20portfolio" target="_blank" class="btn" style="background: #25D366; border-color: #25D366;">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp"/>
+            Direct Link: WhatsApp
+          </a>
+          
+          <a href="https://github.com/Navayuvk18" target="_blank" class="btn btn-secondary">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub"/>
+            Fetch GitHub Host
+          </a>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="footer">
+        <p>SYSTEM STATUS: OPERATIONAL // TERMINAL ID: PRANAV_PATIL_PORTFOLIO // © 2025</p>
+      </footer>
+    </main>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/three-scene.js"></script>
+  <script>
+    // Handle form submit completely client-side via mailto redirection
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const name = encodeURIComponent(document.getElementById("name").value);
+      const email = encodeURIComponent(document.getElementById("email").value);
+      const message = encodeURIComponent(document.getElementById("message").value);
+      
+      const mailtoUrl = `mailto:pranavpatil@example.com?subject=Transmission from HUD Portfolio: ${name}&body=Sender Name: ${name}%0D%0ASender Email: ${email}%0D%0A%0D%0AMessage:%0D%0A${message}`;
+      
+      window.location.href = mailtoUrl;
+    });
+  </script>
+</body>
+</html>

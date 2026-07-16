@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pranav Patil | HUD Command Center Portfolio</title>
+  
+  <!-- Fonts & Layout Stylesheet -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Share+Tech+Mono&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css"/>
+  
+  <!-- WebGL Three.js CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  
+  <!-- 3D Vanilla Tilt CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+</head>
+<body>
+
+  <!-- Mobile Hamburger Menu Button -->
+  <div class="hamburger" id="hud-hamburger">☰</div>
+
+  <!-- Unified HUD Wrapper -->
+  <div class="hud-wrapper">
+    
+    <!-- ===== LEFT FIXED CONTROL CONSOLE SIDEBAR ===== -->
+    <aside class="hud-sidebar" id="hud-sidebar">
+      <div class="hud-brand">
+        <a href="index.html" class="hud-logo">
+          <img src="assets/images/pranav_logo.png" alt="Logo" />
+        </a>
+        
+        <div class="hud-radar-container">
+          <div class="hud-radar"></div>
+          <div class="hud-status-info">
+            <span>SYSTEM_ONLINE: <b class="status-active">TRUE</b></span>
+            <span>MODULE: ML_MODEL_SERVER</span>
+            <span>STABILITY: 99.8%</span>
+          </div>
+        </div>
+      </div>
+
+      <nav class="hud-nav">
+        <ul class="hud-nav-links">
+          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Simulated ML Console Terminal Logs -->
+      <div class="hud-console">
+        <div class="hud-console-lines" id="hud-console-lines">
+          <!-- Populated dynamically via JS -->
+        </div>
+      </div>
+    </aside>
+
+    <!-- ===== RIGHT SCROLL FEED PANEL (CONTENT) ===== -->
+    <main class="hud-content">
+      
+      <!-- HERO PANEL -->
+      <section id="hero" class="hero">
+        <div class="hud-card" style="width: 100%; max-width: 750px; background: rgba(5, 8, 22, 0.5);">
+          <span class="hero-sub">// DEPLOYMENT_SUCCESSFUL //</span>
+          <h1>Hello, I'm <span class="purple">Pranav</span></h1>
+          <h2>I am Data Scientist...<span class="cursor">|</span></h2>
+          <p>
+            Enthusiastic Data Science student skilled in Python for data analysis, machine learning, and automation. Experienced in building 
+            end-to-end solutions with strong foundations in Data Science and supporting Web Development using Flask and MongoDB.
+          </p>
+          <div class="hero-cta">
+            <a href="#projects" class="btn">Explore Projects</a>
+            <a href="#contact" class="btn btn-secondary">System Query</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT PANEL -->
+      <section id="about">
+        <h2 class="section-title">About Me</h2>
+        <p class="section-subtitle">System details and developer specs.</p>
+        
+        <div class="hud-card">
+          <div class="about-grid">
+            <div class="about-img">
+              <img src="assets/images/pranav.png" alt="Profile Picture"/>
+            </div>
+            <div class="about-text">
+              <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--accent-cyan);">Pranav Chandrakant Patil</h3>
+              <p>
+                I’m Pranav Chandrakant Patil, a passionate Data Science student with hands-on experience in Python,
+                Machine Learning, and Full-Stack Development. I’ve built impactful projects ranging from a phishing
+                website detector to a Ganeshotsav Mandal Management System using Flask and MongoDB. 
+              </p>
+              <p>
+                With strong problem-solving skills and a drive to learn, I specialize in creating end-to-end solutions that 
+                merge Data Science pipelines and responsive Web Development.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS PANEL -->
+      <section id="projects">
+        <h2 class="section-title">Projects</h2>
+        <p class="section-subtitle">A showcase of data pipelines and web deployments.</p>
+        
+        <div class="project-grid">
+          <!-- Card 1 -->
+          <div class="project-card hud-card tilt-card">
+            <div class="project-card-image">
+              <img src="assets/images/projects/roomify.png" alt="Roomify"/>
+            </div>
+            <div class="tilt-card-inner">
+              <h3>Roomify - Hostel & Mess</h3>
+              <p>Built a system combining Data Science, ML, and Web Development to manage student accommodation. Implemented AI-based sentiment analysis on user reviews to evaluate service quality.</p>
+              <a href="https://roomify-dw5e.onrender.com" target="_blank" class="btn">Launch Module</a>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="project-card hud-card tilt-card">
+            <div class="project-card-image">
+              <img src="assets/images/projects/Gemini_Generated_Image_vew3nqvew3nqvew3.png" alt="Mandal Management"/>
+            </div>
+            <div class="tilt-card-inner">
+              <h3>Ganeshotsav Mandal System</h3>
+              <p>A digital platform designed to manage Mandal donations, events, volunteer assignments, and daily operations. Built using Flask and MongoDB with secure real-time tracking.</p>
+              <a href="https://navayuvak-wathar-t2m8.onrender.com" target="_blank" class="btn">Launch Module</a>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="project-card hud-card tilt-card">
+            <div class="project-card-image">
+              <img src="assets/images/projects/Gemini_Generated_Image_qq6eggqq6eggqq6e.png" alt="Phishing Detector"/>
+            </div>
+            <div class="tilt-card-inner">
+              <h3>Phishing Website Detector</h3>
+              <p>A machine learning-driven web application that analyzes URL characteristics to predict and block potential phishing threats using classification algorithms.</p>
+              <a href="https://github.com/pranavp1560/WebShield.git" target="_blank" class="btn">Fetch Repository</a>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="project-card hud-card tilt-card">
+            <div class="project-card-image">
+              <img src="assets/images/projects/Gemini_Generated_Image_onvtlmonvtlmonvt.png" alt="E-Learning"/>
+            </div>
+            <div class="tilt-card-inner">
+              <h3>E-Learning Platform</h3>
+              <p>An interactive educational portal featuring customizable course modules, profile management, and progress tracking for students and educators.</p>
+              <a href="https://github.com/Navayuvk18/E-Learning-Platform" target="_blank" class="btn">Fetch Repository</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- EXPERIENCE PANEL -->
+      <section id="experience">
+        <h2 class="section-title">Experience</h2>
+        <p class="section-subtitle">Chronological record of technical assignments.</p>
+        
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="content hud-card tilt-card">
+              <div class="tilt-card-inner">
+                <h3>AI Developer Intern <span>(2026)</span></h3>
+                <p>Developed an Algorithmic Trading System using data analysis, machine learning, and automation. Built API-based pipelines to collect and process market data (stocks, indices, crypto) from multiple brokers. Created structured time-series datasets (OHLC, volume) for backtesting.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="content hud-card tilt-card">
+              <div class="tilt-card-inner">
+                <h3>IIT Bombay | EdTech Intern <span>(2023)</span></h3>
+                <p>Worked on the problem statement “Emotion Classification using Facial Expressions and EEG Data.” Analyzed multimodal datasets to identify emotional states using data preprocessing & feature extraction techniques. Applied ML models for emotion detection.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="content hud-card tilt-card">
+              <div class="tilt-card-inner">
+                <h3>Full-Stack Developer Intern <span>(2024)</span></h3>
+                <p>Developed and launched the Ganeshotsav Mandal Management System. Engineered custom donation collection flows and reporting interfaces using Flask and MongoDB.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILLS PANEL -->
+      <section id="skills">
+        <h2 class="section-title">Skills</h2>
+        <p class="section-subtitle">System capabilities and packages utilized.</p>
+
+        <div class="skills-grid">
+          <div class="skill-card hud-card tilt-card">
+            <div class="tilt-card-inner">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="skill-icon">
+              <h3>Python</h3>
+              <p>(Numpy, Pandas, Scikit-learn, Flask)</p>
+            </div>
+          </div>
+
+          <div class="skill-card hud-card tilt-card">
+            <div class="tilt-card-inner">
+              <img src="https://cdn-icons-png.flaticon.com/512/2103/2103832.png" alt="Machine Learning" class="skill-icon">
+              <h3>Machine Learning</h3>
+              <p>(Classification, Regression, Clustering)</p>
+            </div>
+          </div>
+
+          <div class="skill-card hud-card tilt-card">
+            <div class="tilt-card-inner">
+              <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="Web Dev" class="skill-icon">
+              <h3>Web Development</h3>
+              <p>(HTML, CSS, JavaScript, React)</p>
+            </div>
+          </div>
+
+          <div class="skill-card hud-card tilt-card">
+            <div class="tilt-card-inner">
+              <img src="https://cdn-icons-png.flaticon.com/512/942/942748.png" alt="Cloud" class="skill-icon">
+              <h3>Cloud & Tools</h3>
+              <p>(Git, Git-Hub, Cloudinary, VS Code)</p>
+            </div>
+          </div>
+
+          <div class="skill-card hud-card tilt-card">
+            <div class="tilt-card-inner">
+              <img src="https://cdn-icons-png.flaticon.com/512/1006/1006363.png" alt="Databases" class="skill-icon">
+              <h3>Databases</h3>
+              <p>(SQL, MongoDB, SQLAlchemy)</p>
+            </div>
+          </div>
+
+          <div class="skill-card hud-card tilt-card">
+            <div class="tilt-card-inner">
+              <img src="https://cdn-icons-png.flaticon.com/512/1829/1829448.png" alt="Viz" class="skill-icon">
+              <h3>Data Visualization</h3>
+              <p>(Matplotlib, Seaborn, Tableau)</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT PANEL -->
+      <section id="contact" class="contact">
+        <h2 class="section-title">Query Transmission</h2>
+        <p class="section-subtitle">Establish transmission link to the developer server.</p>
+        
+        <div class="contact-container hud-card" style="width: 100%;">
+          <form id="contactForm">
+            <input type="text" id="name" placeholder="Transmission Source (Your Name)" required/>
+            <input type="email" id="email" placeholder="Communication Node (Your Email)" required/>
+            <textarea id="message" placeholder="Message Payload" required></textarea>
+            <button type="submit" class="btn">Transmit Signal</button>
+          </form>
+        </div>
+
+        <div class="contact-links">
+          <a href="https://wa.me/919999999999?text=Hello%20Pranav,%20I%20saw%20your%20portfolio" target="_blank" class="btn" style="background: #25D366; border-color: #25D366;">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp"/>
+            Direct Link: WhatsApp
+          </a>
+          
+          <a href="https://github.com/Navayuvk18" target="_blank" class="btn btn-secondary">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub"/>
+            Fetch GitHub Host
+          </a>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="footer">
+        <p>SYSTEM STATUS: OPERATIONAL // TERMINAL ID: PRANAV_PATIL_PORTFOLIO // © 2025</p>
+      </footer>
+    </main>
+  </div>
+
+  <!-- Core Javascript Controllers -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/three-scene.js"></script>
+  <script>
+    // Handle form submit completely client-side via mailto redirection
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const name = encodeURIComponent(document.getElementById("name").value);
+      const email = encodeURIComponent(document.getElementById("email").value);
+      const message = encodeURIComponent(document.getElementById("message").value);
+      
+      const mailtoUrl = `mailto:pranavpatil@example.com?subject=Transmission from HUD Portfolio: ${name}&body=Sender Name: ${name}%0D%0ASender Email: ${email}%0D%0A%0D%0AMessage:%0D%0A${message}`;
+      
+      window.location.href = mailtoUrl;
+    });
+  </script>
+</body>
+</html>

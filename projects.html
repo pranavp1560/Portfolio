@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects | Pranav Patil</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Share+Tech+Mono&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css"/>
+  
+  <!-- WebGL Three.js CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  
+  <!-- 3D Vanilla Tilt CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+</head>
+<body>
+
+  <!-- Mobile Hamburger Menu Button -->
+  <div class="hamburger" id="hud-hamburger">☰</div>
+
+  <!-- Unified HUD Wrapper -->
+  <div class="hud-wrapper">
+    
+    <!-- ===== LEFT FIXED CONTROL CONSOLE SIDEBAR ===== -->
+    <aside class="hud-sidebar" id="hud-sidebar">
+      <div class="hud-brand">
+        <a href="index.html" class="hud-logo">
+          <img src="assets/images/pranav_logo.png" alt="Logo" />
+        </a>
+        
+        <div class="hud-radar-container">
+          <div class="hud-radar"></div>
+          <div class="hud-status-info">
+            <span>SYSTEM_ONLINE: <b class="status-active">TRUE</b></span>
+            <span>MODULE: PROJECTS_EXPLORER</span>
+            <span>STABILITY: 99.8%</span>
+          </div>
+        </div>
+      </div>
+
+      <nav class="hud-nav">
+        <ul class="hud-nav-links">
+          <li><a href="index.html#hero">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#projects" class="active">Projects</a></li>
+          <li><a href="index.html#experience">Experience</a></li>
+          <li><a href="index.html#skills">Skills</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Simulated ML Console Terminal Logs -->
+      <div class="hud-console">
+        <div class="hud-console-lines" id="hud-console-lines">
+          <!-- Populated dynamically via JS -->
+        </div>
+      </div>
+    </aside>
+
+    <!-- ===== RIGHT SCROLL FEED PANEL (PROJECT DETAILS) ===== -->
+    <main class="hud-content">
+      
+      <!-- PROJECTS PANEL -->
+      <section id="projects" style="padding-top: 120px;">
+        <h2 class="section-title">Projects</h2>
+        <p class="section-subtitle">A showcase of data pipelines and web deployments.</p>
+        
+        <div class="project-grid">
+          <!-- Card 1 -->
+          <div class="project-card hud-card tilt-card">
+            <div class="project-card-image">
+              <img src="assets/images/projects/roomify.png" alt="Roomify"/>
+            </div>
+            <div class="tilt-card-inner">
+              <h3>Roomify - Hostel & Mess</h3>
+              <p>Built a system combining Data Science, ML, and Web Development to manage student accommodation. Implemented AI-based sentiment analysis on user reviews to evaluate service quality.</p>
+              <a href="https://roomify-dw5e.onrender.com" target="_blank" class="btn">Launch Module</a>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="project-card hud-card tilt-card">
+            <div class="project-card-image">
+              <img src="assets/images/projects/Gemini_Generated_Image_vew3nqvew3nqvew3.png" alt="Mandal Management"/>
+            </div>
+            <div class="tilt-card-inner">
+              <h3>Ganeshotsav Mandal System</h3>
+              <p>A digital platform designed to manage Mandal donations, events, volunteer assignments, and daily operations. Built using Flask and MongoDB with secure real-time tracking.</p>
+              <a href="https://navayuvak-wathar-t2m8.onrender.com" target="_blank" class="btn">Launch Module</a>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="project-card hud-card tilt-card">
+            <div class="project-card-image">
+              <img src="assets/images/projects/Gemini_Generated_Image_qq6eggqq6eggqq6e.png" alt="Phishing Detector"/>
+            </div>
+            <div class="tilt-card-inner">
+              <h3>Phishing Website Detector</h3>
+              <p>A machine learning-driven web application that analyzes URL characteristics to predict and block potential phishing threats using classification algorithms.</p>
+              <a href="https://github.com/pranavp1560/WebShield.git" target="_blank" class="btn">Fetch Repository</a>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="project-card hud-card tilt-card">
+            <div class="project-card-image">
+              <img src="assets/images/projects/Gemini_Generated_Image_onvtlmonvtlmonvt.png" alt="E-Learning"/>
+            </div>
+            <div class="tilt-card-inner">
+              <h3>E-Learning Platform</h3>
+              <p>An interactive educational portal featuring customizable course modules, profile management, and progress tracking for students and educators.</p>
+              <a href="https://github.com/Navayuvk18/E-Learning-Platform" target="_blank" class="btn">Fetch Repository</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="footer">
+        <p>SYSTEM STATUS: OPERATIONAL // TERMINAL ID: PRANAV_PATIL_PORTFOLIO // © 2025</p>
+      </footer>
+    </main>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/three-scene.js"></script>
+</body>
+</html>

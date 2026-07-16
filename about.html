@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Me | Pranav Patil</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Share+Tech+Mono&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css"/>
+  
+  <!-- WebGL Three.js CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  
+  <!-- 3D Vanilla Tilt CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+</head>
+<body>
+
+  <!-- Mobile Hamburger Menu Button -->
+  <div class="hamburger" id="hud-hamburger">☰</div>
+
+  <!-- Unified HUD Wrapper -->
+  <div class="hud-wrapper">
+    
+    <!-- ===== LEFT FIXED CONTROL CONSOLE SIDEBAR ===== -->
+    <aside class="hud-sidebar" id="hud-sidebar">
+      <div class="hud-brand">
+        <a href="index.html" class="hud-logo">
+          <img src="assets/images/pranav_logo.png" alt="Logo" />
+        </a>
+        
+        <div class="hud-radar-container">
+          <div class="hud-radar"></div>
+          <div class="hud-status-info">
+            <span>SYSTEM_ONLINE: <b class="status-active">TRUE</b></span>
+            <span>MODULE: ABOUT_EXPLORER</span>
+            <span>STABILITY: 99.8%</span>
+          </div>
+        </div>
+      </div>
+
+      <nav class="hud-nav">
+        <ul class="hud-nav-links">
+          <li><a href="index.html#hero">Home</a></li>
+          <li><a href="index.html#about" class="active">About</a></li>
+          <li><a href="index.html#projects">Projects</a></li>
+          <li><a href="index.html#experience">Experience</a></li>
+          <li><a href="index.html#skills">Skills</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Simulated ML Console Terminal Logs -->
+      <div class="hud-console">
+        <div class="hud-console-lines" id="hud-console-lines">
+          <!-- Populated dynamically via JS -->
+        </div>
+      </div>
+    </aside>
+
+    <!-- ===== RIGHT SCROLL FEED PANEL (ABOUT DETAILS) ===== -->
+    <main class="hud-content">
+      
+      <!-- ABOUT PANEL -->
+      <section id="about" style="padding-top: 120px;">
+        <h2 class="section-title">About Me</h2>
+        <p class="section-subtitle">System details and developer specs.</p>
+        
+        <div class="hud-card">
+          <div class="about-grid">
+            <div class="about-img">
+              <img src="assets/images/pranav.png" alt="Profile Picture"/>
+            </div>
+            <div class="about-text">
+              <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--accent-cyan);">Pranav Chandrakant Patil</h3>
+              <p>
+                I’m Pranav Chandrakant Patil, a passionate Data Science student with hands-on experience in Python,
+                Machine Learning, and Full-Stack Development. I’ve built impactful projects ranging from a phishing
+                website detector to a Ganeshotsav Mandal Management System using Flask and MongoDB. 
+              </p>
+              <p>
+                With strong problem-solving skills and a drive to learn, I specialize in creating end-to-end solutions that 
+                merge Data Science pipelines and responsive Web Development.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILLS PANEL -->
+      <section id="skills">
+        <h2 class="section-title">Skills</h2>
+        <p class="section-subtitle">System capabilities and packages utilized.</p>
+
+        <div class="skills-grid">
+          <div class="skill-card hud-card tilt-card">
+            <div class="tilt-card-inner">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="skill-icon">
+              <h3>Python</h3>
+              <p>(Numpy, Pandas, Scikit-learn, Flask)</p>
+            </div>
+          </div>
+
+          <div class="skill-card hud-card tilt-card">
+            <div class="tilt-card-inner">
+              <img src="https://cdn-icons-png.flaticon.com/512/2103/2103832.png" alt="Machine Learning" class="skill-icon">
+              <h3>Machine Learning</h3>
+              <p>(Classification, Regression, Clustering)</p>
+            </div>
+          </div>
+
+          <div class="skill-card hud-card tilt-card">
+            <div class="tilt-card-inner">
+              <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="Web Dev" class="skill-icon">
+              <h3>Web Development</h3>
+              <p>(HTML, CSS, JavaScript, React)</p>
+            </div>
+          </div>
+
+          <div class="skill-card hud-card tilt-card">
+            <div class="tilt-card-inner">
+              <img src="https://cdn-icons-png.flaticon.com/512/942/942748.png" alt="Cloud" class="skill-icon">
+              <h3>Cloud & Tools</h3>
+              <p>(Git, Git-Hub, Cloudinary, VS Code)</p>
+            </div>
+          </div>
+
+          <div class="skill-card hud-card tilt-card">
+            <div class="tilt-card-inner">
+              <img src="https://cdn-icons-png.flaticon.com/512/1006/1006363.png" alt="Databases" class="skill-icon">
+              <h3>Databases</h3>
+              <p>(SQL, MongoDB, SQLAlchemy)</p>
+            </div>
+          </div>
+
+          <div class="skill-card hud-card tilt-card">
+            <div class="tilt-card-inner">
+              <img src="https://cdn-icons-png.flaticon.com/512/1829/1829448.png" alt="Viz" class="skill-icon">
+              <h3>Data Visualization</h3>
+              <p>(Matplotlib, Seaborn, Tableau)</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- EXPERIENCE PANEL -->
+      <section id="experience">
+        <h2 class="section-title">Experience</h2>
+        <p class="section-subtitle">Chronological record of technical assignments.</p>
+        
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="content hud-card tilt-card">
+              <div class="tilt-card-inner">
+                <h3>AI Developer Intern <span>(2026)</span></h3>
+                <p>Developed an Algorithmic Trading System using data analysis, machine learning, and automation. Built API-based pipelines to collect and process market data (stocks, indices, crypto) from multiple brokers. Created structured time-series datasets (OHLC, volume) for backtesting.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="content hud-card tilt-card">
+              <div class="tilt-card-inner">
+                <h3>IIT Bombay | EdTech Intern <span>(2023)</span></h3>
+                <p>Worked on the problem statement “Emotion Classification using Facial Expressions and EEG Data.” Analyzed multimodal datasets to identify emotional states using data preprocessing & feature extraction techniques. Applied ML models for emotion detection.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="content hud-card tilt-card">
+              <div class="tilt-card-inner">
+                <h3>Full-Stack Developer Intern <span>(2024)</span></h3>
+                <p>Developed and launched the Ganeshotsav Mandal Management System. Engineered custom donation collection flows and reporting interfaces using Flask and MongoDB.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="footer">
+        <p>SYSTEM STATUS: OPERATIONAL // TERMINAL ID: PRANAV_PATIL_PORTFOLIO // © 2025</p>
+      </footer>
+    </main>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/three-scene.js"></script>
+</body>
+</html>
